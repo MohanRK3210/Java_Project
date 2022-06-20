@@ -27,7 +27,6 @@ class BigAndSmallNumber
 		smallestNumber = num1<num2 ? num1:num2;
 		smallestResult = smallestNumber<num3 ? smallestNumber:num3;
 
-
 		System.out.println("\n ===== Result ===== ");
 		System.out.println("\n The Biggest Number is: "+ biggestResult);
 		System.out.println("\n The Smallest Number is: "+ smallestResult);
