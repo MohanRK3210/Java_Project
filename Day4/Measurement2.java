@@ -28,7 +28,6 @@ class Measurement
 
 	centimeter = centimeter-(feet*30); // 70-(2*30)= 
 	
-	System.out.println("The Centimeter  : " + centimeter);
-
+	System.out.println(("\n"+ kilometer + " Kilometres ") + ( meter + " Meters ") + ( feet + " Feet ") + ( centimeter + " centimeter "));
 	}
 }

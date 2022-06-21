@@ -1,0 +1,36 @@
+//Biology(200/2),physics(200/4),chemistry(200/4)-MBBS
+import java.util.Scanner;
+
+class CutOff
+{
+	public static void main(String[] args)
+	{
+		Scanner scan = new Scanner(System.in);
+		int biology,physics,chemistry,cutoff;
+
+		System.out.println("\n======= MBBS/BE CutOff Mark =======");
+		System.out.print("\nEnter the Biology Mark(200/200)  : ");
+		biology = scan.nextInt();
+
+		System.out.print("Enter the Physics Mark(200/200)  : ");
+		physics = scan.nextInt();
+
+		System.out.print("Enter the Chemistry Mark(200/200): ");
+		chemistry = scan.nextInt();
+
+		cutoff = (biology/2)+(chemistry/4)+(physics/4);
+
+		System.out.print("\n---------------------------------------");
+		System.out.print("\nYour CutOff Mark is: " + cutoff+"/200");
+		System.out.print("\n---------------------------------------");
+
+		if(cutoff >=180)
+		{
+			System.out.println("\nYou are Eligible for MBBS/BE.");
+		}
+		else
+		{
+			System.out.println("\nYou are Not Eligible for MBBS/BE.");
+		}
+	}
+}
