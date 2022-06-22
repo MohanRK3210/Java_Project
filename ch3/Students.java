@@ -12,19 +12,19 @@ class Students
 		double average,persentage;
 		Scanner scan = new Scanner(System.in);
 
-		System.out.print("\nEnter the Tamil Mark: ");
+		System.out.print("\nTamil : ");
 		tamil = scan.nextInt(); // User Input
 		
-		System.out.print("Enter the English Mark: ");
+		System.out.print("English : ");
 		english = scan.nextInt(); // User Input
 		
-		System.out.print("Enter the Maths Mark: ");
+		System.out.print("Maths : ");
 		math = scan.nextInt(); // User Input
 		
-		System.out.print("Enter the Science Mark: ");
+		System.out.print("Science : ");
 		science = scan.nextInt(); // User Input
 		
-		System.out.print("Enter the Social Mark: ");
+		System.out.print("Social : ");
 		social = scan.nextInt(); // User Input
 
 		// Operations
@@ -32,14 +32,14 @@ class Students
 		average = (totalmark/5.0);
 		persentage = (totalmark/500.0)*100;
 
-		System.out.println("\nThe Student Total Mark: " + totalmark);
-		System.out.println("\nThe Student Average Mark: " + average);
-		System.out.println("\nThe Student Persentage Mark: " + persentage);
+		System.out.println("\nStudent Total Mark: " + totalmark);
+		System.out.println("\nStudent Average Mark: " + average);
+		System.out.println("\nStudent Over All Persentage : " + persentage);
 	}
 
 	public static void main(String[] args)
 	{
-		System.out.println("\n ===== Student Mark Value ===== ");
+		System.out.println("\n===== Students Mark Detail =====");
 		student(); // Method Calling
 	} // End of main
 } // End of Students Class

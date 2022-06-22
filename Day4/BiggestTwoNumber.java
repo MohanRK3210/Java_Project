@@ -12,16 +12,12 @@ class BiggestTwoNumber
 		int num1,num2;
 		System.out.println(" ===== Find The Biggest Number ===== ");
 
-		System.out.print("\nEnter the First Number: ");
+		System.out.print("\nFirst Number: ");
 		num1 = scan.nextInt();
 
-		System.out.print("Enter the Second Number: ");
+		System.out.print("Second Number: ");
 		num2 = scan.nextInt();
 
 		System.out.println(Math.max(num1,num2) + " is greater ");
 	}
 }
-
-
-
-

@@ -7,16 +7,16 @@ class SimpleInterest
 		Scanner scan = new Scanner(System.in);
 		float rateOfInterest,principalAmount,numberOfDays,simpleInterest,percentage;
 		int amount,percentageOfPrincipal,netpayable;
-		System.out.println("\n===== Simple Interest =====");
 
-		System.out.print("\nEnter the Principal Amount: ");
+		System.out.println("\n===== Simple Interest =====");
+		System.out.print("\nPrincipal Amount: ");
 		principalAmount = scan.nextInt();
 
-		System.out.print("Enter the Rate of Interest: ");
+		System.out.print("Rate of Interest: ");
 		rateOfInterest = scan.nextFloat();
-		rateOfInterest = rateOfInterest/30;
+		rateOfInterest = rateOfInterest/12;
 
-		System.out.print("Enter the Number of Days: ");
+		System.out.print("Number of Days: ");
 		numberOfDays = scan.nextInt();
 
 		//simple Interest = p*r*t/100

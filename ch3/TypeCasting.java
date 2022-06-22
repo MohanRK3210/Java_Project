@@ -11,13 +11,13 @@ class TypeCasting
 		int integer;
 		
 		Scanner scan = new Scanner(System.in);
-		System.out.print("\nEnter the Byte Number: ");
+		System.out.print("\nByte Number: ");
 		
 		bit = scan.nextByte();
 		integer = (int)bit;
 		System.out.println("The Byte value " + bit + " is convert to Interger: "+ integer);
 
-		System.out.print("\nEnter the Integer Number: ");
+		System.out.print("\nInteger Number: ");
 		integer = scan.nextByte();
 		bit = (byte)integer;
 		System.out.println("The Byte value " + integer + " is convert to Byte: "+ bit);
@@ -30,13 +30,13 @@ class TypeCasting
 		float floater;
 		
 		Scanner scan = new Scanner(System.in);
-		System.out.print("\nEnter the Interger Value: ");
+		System.out.print("\nInterger Value: ");
 		integer = scan.nextInt();
 		
 		floater = integer;	
 		System.out.println("The Interger value " + integer + " is convert to Float: "+ floater);
 
-		System.out.print("\nEnter the Floating Value: ");
+		System.out.print("\nFloating Value: ");
 		floater = scan.nextFloat();
 		
 		integer = (int)floater;	
@@ -49,13 +49,13 @@ class TypeCasting
 		long longer;
 		
 		Scanner scan = new Scanner(System.in);
-		System.out.print("\nEnter the Integer Value: ");
+		System.out.print("\nInteger Value: ");
 		integer = scan.nextInt();
 		
 		longer = Long.valueOf(integer);	
 		System.out.println("The Interger value " + integer + " is convert to Long: "+ longer);
 
-		System.out.print("\nEnter the Long Value: ");
+		System.out.print("\nLong Value: ");
 		longer = scan.nextInt();
 		
 		integer = (int)longer;	
@@ -68,13 +68,13 @@ class TypeCasting
 		double doubler;
 
 		Scanner scan = new Scanner(System.in);
-		System.out.print("\nEnter the Float Value: ");
+		System.out.print("\nFloat Value: ");
 		floater = scan.nextFloat();
 		
 		doubler = (double) floater;
 		System.out.println("The Float value " + floater + " is convert to Double: "+ doubler);
 
-		System.out.print("\nEnter the Double Value: ");
+		System.out.print("\nDouble Value: ");
 		doubler = scan.nextDouble();
 		
 		floater = (float)doubler;	
@@ -87,13 +87,13 @@ class TypeCasting
 		double doubler;
 
 		Scanner scan = new Scanner(System.in);
-		System.out.print("\nEnter the Integer Value: ");
+		System.out.print("\nInteger Value: ");
 		integer = scan.nextInt();
 
 		doubler = (double) integer;
 		System.out.println("The Integer value " + integer + " is convert to Double: "+ doubler);
 
-		System.out.print("\nEnter the Double Value: ");
+		System.out.print("\nDouble Value: ");
 		doubler = scan.nextDouble();
 		
 		integer = (int)doubler;	
@@ -106,13 +106,13 @@ class TypeCasting
 		char character;
 
 		Scanner scan = new Scanner(System.in);
-		System.out.print("\nEnter the Character Letter: ");
+		System.out.print("\nCharacter Letter: ");
 		character = scan.next().charAt(0);
 		
 		integer = Character.getNumericValue(character);
 		System.out.println("The Character Letter " + character + " is convert to Integer: "+ integer);
 
-		System.out.print("\nEnter the Integer Value: ");
+		System.out.print("\nInteger Value: ");
 		integer = scan.nextInt();
 		
 		character = (char)integer;	
@@ -125,13 +125,13 @@ class TypeCasting
 		boolean bool;
 
 		Scanner scan = new Scanner(System.in);
-		System.out.print("\nEnter the Boolen (True/False): ");
+		System.out.print("\nBoolen (True/False): ");
 		bool = scan.nextBoolean();
 		
 		integer = (bool)?1:0;
 		System.out.println("The Boolean (True/False) " + bool + " is convert to Integer: "+ integer);
 
-		System.out.print("\nEnter the Integer Value( 0 / 1 ): ");
+		System.out.print("\nInteger Value( 0 / 1 ): ");
 		integer = 1;
 
 		bool = (integer == scan.nextInt());
@@ -144,13 +144,13 @@ class TypeCasting
 		String string;
 
 		Scanner scan = new Scanner(System.in);
-		System.out.print("\nEnter the Character: ");
+		System.out.print("\nCharacter: ");
 		character = scan.next().charAt(0);
 		
 		string = String.valueOf(character);
 		System.out.println("The Character " + character + " is convert to String: "+ string);
 
-		System.out.print("\nEnter the String: ");
+		System.out.print("\nString: ");
 		string = scan.next();
 
 		character  = string.charAt(0);
@@ -182,6 +182,5 @@ class TypeCasting
 
 		System.out.println("\n ===== Character to String ===== ");
 		charToString();
-	
 	} // End of main
 } // End of TypeCasting Class

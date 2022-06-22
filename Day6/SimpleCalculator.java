@@ -8,10 +8,10 @@ class SimpleCalculator
 		int firstNumber,secondNumber,addition,subtraction,multiplication,division,moduloDivision;
 
 		System.out.println("\n ====== Simple Calculator =====");
-		System.out.print("\nEnter the First Number  : ");
+		System.out.print("\nFirst Number  : ");
 		firstNumber = scan.nextInt();
 
-		System.out.print("Enter the Second Number : ");
+		System.out.print("Second Number : ");
 		secondNumber = scan.nextInt();
 
 		addition = firstNumber + secondNumber;

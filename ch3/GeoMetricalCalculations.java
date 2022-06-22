@@ -11,7 +11,7 @@ class GeoMetricalCalculations
 		Scanner scan = new Scanner(System.in);
 		int side,square;
 
-		System.out.print("Enter the value of Side: ");
+		System.out.print("Value of Side: ");
 		side = scan.nextInt();
 
 		square = side*side;
@@ -24,10 +24,10 @@ class GeoMetricalCalculations
 		Scanner scan = new Scanner(System.in);
 		int  width,length,retangle;
 
-		System.out.print("Enter the value of width: ");
+		System.out.print("Value of width: ");
 		width = scan.nextInt();
 
-		System.out.print("Enter the value of Length: ");
+		System.out.print("Value of Length: ");
 		length = scan.nextInt();
 
 		retangle = width*length;
@@ -38,11 +38,11 @@ class GeoMetricalCalculations
 	{
 		// A = pi *r*r
 		Scanner scan = new Scanner(System.in);
-		double pi,circle;
+		final double pi = 3.14;
+		double circle;
 		int radius;
 
-		pi = 3.14;
-		System.out.print("Enter the value of Radius: ");
+		System.out.print("Value of Radius: ");
 		radius = scan.nextInt();
 
 		circle = pi*radius*radius;
@@ -56,13 +56,13 @@ class GeoMetricalCalculations
 
 		Scanner scan = new Scanner(System.in);
 
-		System.out.print("Enter the value of Base Value 1: ");
+		System.out.print("Value of Base Value 1: ");
 		base1 = scan.nextInt();
 		
-		System.out.print("Enter the value of Base Value 2: ");
+		System.out.print("Value of Base Value 2: ");
 		base2 = scan.nextInt();
 
-		System.out.print("Enter the value of Height: ");
+		System.out.print("Value of Height: ");
 		height = scan.nextInt();
 
 		trapezoid = (base1+base2/2)*height;
@@ -76,10 +76,10 @@ class GeoMetricalCalculations
 		int base,height,parallelogram;
 		Scanner scan = new Scanner(System.in);
 
-		System.out.print("Enter the value of Base: ");
+		System.out.print("Value of Base: ");
 		base = scan.nextInt();
 
-		System.out.print("Enter the value of Height: ");
+		System.out.print("Value of Height: ");
 		height = scan.nextInt();
 
 		parallelogram = base*height;
@@ -94,10 +94,10 @@ class GeoMetricalCalculations
 		double pdiagonal,qdiagonal,rhombus;
 		Scanner scan = new Scanner(System.in);
 
-		System.out.print("Enter the p-diagonal value: ");
+		System.out.print("p-diagonal value: ");
 		pdiagonal = scan.nextDouble();
 
-		System.out.print("Enter the q-diagonal value: ");
+		System.out.print("q-diagonal value: ");
 		qdiagonal = scan.nextDouble();
 
 		rhombus = pdiagonal*qdiagonal/2;

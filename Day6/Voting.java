@@ -10,7 +10,6 @@ class Voting
 		System.out.println("\n===== Canditate Check For Voting =====");
 		System.out.print("\nEnter your Age: ");
 		age = scan.nextInt();
-
 		if (age>=18)
 		{
 			System.out.println("\nYou are Eligible for Voting.");

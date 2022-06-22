@@ -5,14 +5,14 @@ import java.util.Scanner;
 
 class Circumference
 {
-	public static void CircleOfCircumference()
+	public static void circumferenceOfCircle()
 	{
 		// 2*Pi*radius
 		final double pi = 3.14;
 		double radius,circleofcircumference;
 
 		Scanner scan = new Scanner(System.in);
-		System.out.print("\nEnter the Radius: ");
+		System.out.print("\nRadius Value: ");
 		radius = scan.nextDouble();
 
 		circleofcircumference = 2*pi*radius;
@@ -20,14 +20,14 @@ class Circumference
 
 	} // End of CircleOfCircumference
 
-	public static void SquareOfCircumference()
+	public static void circumferenceOfSquare()
 	{
 		// 4*area
 		
 		int area,squareofcircumference;
 
 		Scanner scan = new Scanner(System.in);
-		System.out.print("\nEnter the Area: ");
+		System.out.print("\nArea value: ");
 		area = scan.nextInt();
 
 		squareofcircumference = 4*area;
@@ -35,17 +35,17 @@ class Circumference
 	
 	} // End of CircleOfCircumference
 
-public static void RetangleOfCircumference()
+public static void circumferenceOfRetangle()
 	{
 		// 2*(length+Width)
 		
 		int length,width,retangleofcircumference;
 
 		Scanner scan = new Scanner(System.in);
-		System.out.print("\nEnter the length: ");
+		System.out.print("\nRetangle length: ");
 		length = scan.nextInt();
 
-		System.out.print("\nEnter the Width: ");
+		System.out.print("\nRetangle Width: ");
 		width = scan.nextInt();
 
 		retangleofcircumference = 2*(length+width);
@@ -54,11 +54,11 @@ public static void RetangleOfCircumference()
 
 	public static void main(String[] args)
 	{
-		System.out.println("\n ===== Circle Of Circumference =====");
-		CircleOfCircumference();
-		System.out.println("\n ===== Square Of Circumference =====");
-		SquareOfCircumference();
-		System.out.println("\n ===== Retangle Of Circumference =====");
-		RetangleOfCircumference();
+		System.out.println("\n ===== Circumference Of Circle =====");
+		circumferenceOfCircle();
+		System.out.println("\n ===== Circumference Of Square =====");
+		circumferenceOfSquare();
+		System.out.println("\n ===== Circumference Of Retangle =====");
+		circumferenceOfRetangle();
 	} // End of main
 } // End of Circumference Class

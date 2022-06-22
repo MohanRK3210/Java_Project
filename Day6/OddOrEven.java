@@ -9,7 +9,7 @@ class OddOrEven
 
 		System.out.print("\nEnter the Number: ");
 		check = scan.nextInt();
-
+		
 		if (check%2 == 0)
 		{
 			System.out.println(check + " is even.");

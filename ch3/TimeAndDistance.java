@@ -11,15 +11,16 @@ class TimeAndDistance
 		float distance,time,speed;
 		Scanner scan = new Scanner(System.in);
 
-		System.out.print("\nEnter the Distance (km): ");
+		System.out.print("\nThe Distance (km): ");
 		distance = scan.nextFloat(); // User Input
 
-		System.out.print("Enter the Speed (km/hr): ");
+		System.out.print("The Speed (km/hr): ");
 		speed = scan.nextFloat(); // User Input
+		speed = speed/60;//1*60
 
 		// Operation
 		time = (distance/speed);
-		System.out.println("Find the Time (hr): "+ time);
+		System.out.println("Find the Time (hr): "+ time+" Minutes");
 
 	} // End of time
 
@@ -28,15 +29,15 @@ class TimeAndDistance
 		Scanner scan = new Scanner(System.in);
 		float distance,time,speed;
 
-		System.out.print("\nEnter the Distance (km): ");
+		System.out.print("\nThe Distance (km): ");
 		distance = scan.nextFloat();
 
-		System.out.print("Enter the Time (hr): ");
+		System.out.print("The Time (hr): ");
 		time = scan.nextFloat();
 
 		//Operation
 		speed = (distance/time);
-		System.out.println("Find the Time (km/hr): "+ speed);
+		System.out.println("The Time (km/hr): "+ speed);
 	}
 
 	public static void distance()
@@ -44,15 +45,15 @@ class TimeAndDistance
 		Scanner scan = new Scanner(System.in);
 		float distance,time,speed;
 
-		System.out.print("Enter the speed (km/hr): ");
+		System.out.print("The speed (km/hr): ");
 		speed = scan.nextFloat();		
 
-		System.out.print("Enter the Time (hr): ");
+		System.out.print("The Time (hr): ");
 		time = scan.nextFloat();
 
 		//Operation
 		distance = speed*time;
-		System.out.println("Find the Time (km/hr): "+ distance);
+		System.out.println("The Time (km/hr): "+ distance);
 	}
 
 	public static void main(String[] args)

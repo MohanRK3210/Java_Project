@@ -10,7 +10,7 @@ class Measurement
 
 	System.out.println("\n===== Measurement ===== ");
 
-	System.out.print("\nEnter the Centimeter: ");
+	System.out.print("\nCentimeter Value: ");
 	centimeter = scan.nextLong();
 
 	kilometer = (centimeter>=10000)? (centimeter/10000):(centimeter*0);

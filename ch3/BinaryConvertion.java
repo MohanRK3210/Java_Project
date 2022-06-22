@@ -11,13 +11,13 @@ class BinaryConvertion
 		int decimal;
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.print("\nEnter the Decimal Number: ");
+		System.out.print("\nDecimal Number: ");
 		decimal = scan.nextInt();
 		
 		String binary = Integer.toBinaryString(decimal);
 		System.out.println("The Decimal Number Convert to Binary Number: "+ binary);
 
-		System.out.print("\nEnther the Binary Number: ");
+		System.out.print("\nBinary Number: ");
 		binary = scan.next();
 
 		decimal = Integer.parseInt(binary,2); 
@@ -31,13 +31,13 @@ class BinaryConvertion
 		float floating;
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.print("\nEnter the Float Number: ");
+		System.out.print("\nFloat Number: ");
 		floating = scan.nextFloat();
 
 		String binary = Integer.toBinaryString(Float.floatToIntBits(floating));
 		System.out.println("The Floating Pointer Convert to Binary Number: "+ binary);
 
-		System.out.print("\nEnter the Binary Number:");
+		System.out.print("\nBinary Number:");
 
 	}
 

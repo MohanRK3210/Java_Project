@@ -18,24 +18,22 @@ class EbBill
 		}
 		else if(unit <= 300)
 		{
-			amount = ((100*0)+((unit-100)*2.50));
+			amount = (unit-100)*2.50;
 			System.out.println("Your EB Bill Amount : " + amount);
 		}
 		else if(unit <= 500)
 		{
-			amount = ((100*0)+(100*2.50)+((unit-300)*3.00));
+			amount = (200*2.50)+(unit-300)*3.00;//500 = 100*0+(200*2.5)+(500-300)*3.00
 			System.out.println("Your EB Bill Amount : " + amount);
 		}
-
 		else if(unit <= 1000)
 		{
-			amount = ((100*0)+(100*2.50)+(100*3.00)+((unit-500)*5.00));
+			amount = (200*2.50)+(200*3.00)+(unit-500)*5.00;
 			System.out.println("Your EB Bill Amount : " + amount);
 		}
-
 		else 
 		{
-			amount = ((100*0)+(100*2.50)+(100*3.00)+(100*5.00)+((unit-1000)*7.00));
+			amount = (200*2.50)+(200*3.00)+(500*5.00)+(unit-1000)*7.00;
 			System.out.println("Your EB Bill Amount : " + amount);
 		}
 	}

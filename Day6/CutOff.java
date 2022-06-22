@@ -9,13 +9,13 @@ class CutOff
 		int biology,physics,chemistry,cutoff;
 
 		System.out.println("\n======= MBBS/BE CutOff Mark =======");
-		System.out.print("\nEnter the Biology Mark(200/200)  : ");
+		System.out.print("\nBiology Mark(200/200)  : ");
 		biology = scan.nextInt();
 
-		System.out.print("Enter the Physics Mark(200/200)  : ");
+		System.out.print("Physics Mark(200/200)  : ");
 		physics = scan.nextInt();
 
-		System.out.print("Enter the Chemistry Mark(200/200): ");
+		System.out.print("Chemistry Mark(200/200): ");
 		chemistry = scan.nextInt();
 
 		cutoff = (biology/2)+(chemistry/4)+(physics/4);

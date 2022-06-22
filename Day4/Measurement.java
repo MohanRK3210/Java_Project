@@ -5,11 +5,11 @@ class Measurement{
 	public static void cmToMeter()
 	{
 		// cm/100
-		int centimeter,centimeterToMeter;
+		float centimeter,centimeterToMeter;
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.print("\nEnter Your Centimeter Value: ");
-		centimeter = scan.nextInt();
+		System.out.print("\nYour Centimeter Value: ");
+		centimeter = scan.nextFloat();
 
 		centimeterToMeter = centimeter/100;
 		System.out.println("The Centimeter value is "+ centimeter + " To Convert Meter Value is " + centimeterToMeter);
@@ -18,11 +18,11 @@ class Measurement{
 	public static void meterToKilometer()
 	{
 		// meter/1000
-		int meter,meterToKilometer;
+		float meter,meterToKilometer;
 		Scanner scan = new Scanner(System.in);
 
-		System.out.print("\nEnter Your Meter Value: ");
-		meter = scan.nextInt();
+		System.out.print("\nYour Meter Value: ");
+		meter = scan.nextFloat();
 		
 		meterToKilometer = meter/1000;
 		System.out.println("The Meter Value is " + meter +" to Convert Kilometer value is "+ meterToKilometer);
@@ -31,11 +31,11 @@ class Measurement{
 	public static void inchesToFeet()
 	{
 		// user input/12
-		int inches,inchesToFeet;
+		float inches,inchesToFeet;
 		Scanner scan = new Scanner(System.in);
 
-		System.out.print("\nEnter Your inches Value: ");
-		inches = scan.nextInt();
+		System.out.print("\nYour inches Value: ");
+		inches = scan.nextFloat();
 		
 		inchesToFeet = inches/12;
 		System.out.println("The inches Value is " + inches +" to Convert Feet value is "+ inchesToFeet);
@@ -44,11 +44,11 @@ class Measurement{
 	public static void sqftToCent()
 	{
 		// userinput/436
-		int sqft,sqftToCent;
+		float sqft,sqftToCent;
 		Scanner scan = new Scanner(System.in);
 
-		System.out.print("\nEnter Your Squarefeet Value: ");
-		sqft = scan.nextInt();
+		System.out.print("\nSquare feet Value: ");
+		sqft = scan.nextFloat();
 		
 		sqftToCent = sqft/436;
 		System.out.println("The Square Feet Value is " + sqft +" to Convert Cent value is "+ sqftToCent);
@@ -57,11 +57,11 @@ class Measurement{
 	public static void gramToKilogram()
 	{
 		// userinput/1000
-		int gram,gramToKilogram;
+		float gram,gramToKilogram;
 		Scanner scan = new Scanner(System.in);
 
-		System.out.print("\nEnter Your gram Value: ");
-		gram = scan.nextInt();
+		System.out.print("\nYour gram Value: ");
+		gram = scan.nextFloat();
 		
 		gramToKilogram = gram/1000;
 		System.out.println("The Gram Value is " + gram +" to Convert Kilogram value is "+ gramToKilogram);
@@ -73,7 +73,7 @@ class Measurement{
 		double rupees,rupeesToDollar;
 		Scanner scan = new Scanner(System.in);
 
-		System.out.print("\nEnter Your Rupees Amount: ");
+		System.out.print("\nYour Rupees Amount: ");
 		rupees = scan.nextDouble();
 		
 		rupeesToDollar = rupees/76.75;
@@ -83,11 +83,11 @@ class Measurement{
 	public static void fahrenheltToCelsius()
 	{
 		// (F-32)*5/9
-		int fahrenhelt,fahrenheltToCelsius;
+		float fahrenhelt,fahrenheltToCelsius;
 		Scanner scan = new Scanner(System.in);
 
-		System.out.print("\nEnter Your Fahrenhelt Value: ");
-		fahrenhelt = scan.nextInt();
+		System.out.print("\nFahrenhelt Value: ");
+		fahrenhelt = scan.nextFloat();
 		
 		fahrenheltToCelsius = (fahrenhelt - 32)*5/9;
 		System.out.println("The Fahrenhelt Value is " + fahrenhelt +" to Convert Celsius value is "+ fahrenheltToCelsius);

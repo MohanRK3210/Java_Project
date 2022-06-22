@@ -7,21 +7,21 @@ class StudentGrade
 		Scanner scan = new Scanner(System.in);
 		int tamil,english,math,science,social,average;
 
-		System.out.println("\n===== Student Grade Checker =====");
+		System.out.println("\n===== Checking  Student Grade =====");
 		
-		System.out.print("\nEnter the Tamil Mark: ");
+		System.out.print("\nTamil Mark: ");
 		tamil = scan.nextInt();
 
-		System.out.print("Enter the English Mark: ");
+		System.out.print("English Mark: ");
 		english = scan.nextInt();
 
-		System.out.print("Enter the Maths Mark: ");
+		System.out.print("Maths Mark: ");
 		math = scan.nextInt();
 
-		System.out.print("Enter the Social Mark: ");
+		System.out.print("Social Mark: ");
 		social = scan.nextInt();
 
-		System.out.print("Enter the Science Mark: ");
+		System.out.print("Science Mark: ");
 		science = scan.nextInt();
 
 		average = (tamil+english+math+science+social)/5;

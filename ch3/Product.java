@@ -13,19 +13,18 @@ public class Product
 		int x,y,z; // input by user given product Value
 		int result; // product of Numbers
 
-
 		System.out.println(" ===== Find The Product ===== ");
 
-		System.out.print("\nEnter the First Product Value: ");
+		System.out.print("\nFirst Product Value: ");
 		x = scan.nextInt();
 
-		System.out.print("Enter the Scond Product Value: ");
+		System.out.print("Scond Product Value: ");
 		y = scan.nextInt();
 
-		System.out.print("Enter the Third Product Value: ");
+		System.out.print("Third Product Value: ");
 		z = scan.nextInt();
 
 		result = x*y*z; // Calculate product of number
-		System.out.printf("\nProduct is %d%n ", result);
+		System.out.println("\nProduct is: " + result);
 	} // end method main
 } // end class Product

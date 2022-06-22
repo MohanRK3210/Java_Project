@@ -7,7 +7,6 @@ class Arithmetic
 	{
 		// Store the value
 		double a,b,c,d;
-
 		// Given Operation
 		a = -5+8*6;
 		b = (55+9)%9;
