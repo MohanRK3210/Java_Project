@@ -19,7 +19,7 @@ class InterestCalculation
 		rateofinterest = scan.nextDouble();
 
 		System.out.print("Number of Years: ");
-		years =12*scan.nextDouble();
+		years =scan.nextDouble();
 
 		simpleinterest = principalamount*rateofinterest*years/100;
 		System.out.println("The Value of Simple Interest: " + simpleinterest);
@@ -37,11 +37,12 @@ class InterestCalculation
 
 		System.out.print("Rate of Interest: ");
 		rateofinterest = scan.nextDouble();
+		rateofinterest =rateofinterest/100;
 
 		System.out.print("Number of Years: ");
-		years =12*scan.nextDouble();
+		years =scan.nextDouble();
 		
-		compoundinterest = principalamount*(1+rateofinterest/100)*years;
+		compoundinterest = principalamount*Math.pow(1+rateofinterest, years);
 		System.out.println("The Value of Compound Interest: " + compoundinterest);
 	}
 

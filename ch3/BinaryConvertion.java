@@ -22,7 +22,6 @@ class BinaryConvertion
 
 		decimal = Integer.parseInt(binary,2); 
 		System.out.println("The Binary Number Convert to Decimal Number: "+ decimal);
-
 	}
 
 	public static void floating()
@@ -38,7 +37,6 @@ class BinaryConvertion
 		System.out.println("The Floating Pointer Convert to Binary Number: "+ binary);
 
 		System.out.print("\nBinary Number:");
-
 	}
 
 	public static void main(String[] args)
@@ -47,7 +45,6 @@ class BinaryConvertion
 		realNumber(); // Method Calling
 
 		System.out.println("\n ===== Floating to Binary =====");
-		floating(); // Method Calling
-		
+		floating(); // Method Calling		
 	} // End of main
 } // End of BinaryConversation Class

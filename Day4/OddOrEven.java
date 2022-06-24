@@ -5,11 +5,10 @@ import java.util.Scanner;
 
 class OddOrEven
 {
-	public static void main(String[] args)
+	public static void oddOrEven()
 	{
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("\n ===== Odd Or Even ===== ");
 		int number;
 		String result;
 		System.out.print("\nThe Value: ");
@@ -17,5 +16,11 @@ class OddOrEven
 
 		result = (number % 2) == 0 ? " Even" : " Odd";
 		System.out.println("\nThe User given Value is"+ result);
+
+	}
+	public static void main(String[] args)
+	{
+		System.out.println("\n ===== Odd Or Even ===== ");
+		oddOrEven();
 	}
 }

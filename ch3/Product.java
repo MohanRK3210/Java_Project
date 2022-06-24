@@ -5,15 +5,12 @@ import java.util.Scanner;
 
 public class Product
 {
-	public static void main(String[] args)
+	public static void product()
 	{
-		//create Scanner to input from command window
 		Scanner scan = new Scanner(System.in);
 
 		int x,y,z; // input by user given product Value
 		int result; // product of Numbers
-
-		System.out.println(" ===== Find The Product ===== ");
 
 		System.out.print("\nFirst Product Value: ");
 		x = scan.nextInt();
@@ -26,5 +23,13 @@ public class Product
 
 		result = x*y*z; // Calculate product of number
 		System.out.println("\nProduct is: " + result);
+	}
+
+	public static void main(String[] args)
+	{
+		//create Scanner to input from command window
+
+		System.out.println(" ===== Find The Product ===== ");
+		product();		
 	} // end method main
 } // end class Product

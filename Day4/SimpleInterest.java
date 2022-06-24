@@ -2,41 +2,50 @@ import java.util.Scanner;
 
 class SimpleInterest
 {
-	public static void main(String[] args)
+	public static void simpleInterest()
 	{
-		Scanner scan = new Scanner(System.in);
-		float rateOfInterest,principalAmount,numberOfDays,simpleInterest,percentage;
-		int amount,percentageOfPrincipal,netpayable;
 
-		System.out.println("\n===== Simple Interest =====");
+		Scanner scan = new Scanner(System.in);
+		float rateOfInterest,principalAmount,amount,numberOfDays,month,years,simpleInterest,percentage,percentageOfPrincipal,netpayable;
+
 		System.out.print("\nPrincipal Amount: ");
 		principalAmount = scan.nextInt();
 
 		System.out.print("Rate of Interest: ");
 		rateOfInterest = scan.nextFloat();
-		rateOfInterest = rateOfInterest/12;
+		rateOfInterest = rateOfInterest/365;
 
 		System.out.print("Number of Days: ");
 		numberOfDays = scan.nextInt();
 
-		//simple Interest = p*r*t/100
-		// 10000 *10/100*15=10500/
-		// 10000*0.33333*15=499.995
-		// 10/30 = 0.33,10*0.33=4.95
+		System.out.println("\n---------------------------------------");
+		
+		simpleInterest = principalAmount*rateOfInterest*numberOfDays/100;
+		amount = simpleInterest;
+		System.out.println("\nDay Interest: "+ Math.round(amount));
+		
+		month = (amount/numberOfDays)*30; 
+		System.out.println("\nMonthly Interest: "+ Math.round(month));
+		
+		years = (amount/numberOfDays)*365; 
+		System.out.println("\nYears Interest: "+ Math.round(years));
 
-		simpleInterest = (principalAmount*rateOfInterest*numberOfDays)/100;
-		amount =(int)simpleInterest;
-		System.out.println("\nSimple Interest: "+ amount);
+		System.out.println("---------------------------------------");
 
-		percentage = rateOfInterest*numberOfDays;
-		percentageOfPrincipal = (int)percentage;
-		System.out.println("\nPercentage Of Principal Amount: " + percentageOfPrincipal+"%");
+		percentage = (simpleInterest/principalAmount)*100;
+		System.out.println("\nPercentage of Day Interest: "+ percentage+"%");
+		
+		percentageOfPrincipal = 100-percentage;
+		System.out.println("\nPercentage of principal Amount: "+ percentageOfPrincipal+"%");
 
-		netpayable = (int)principalAmount+amount;
-		System.out.println("\nNet payable Amount will be : " + netpayable);
-		// 10000 = 100%
-		// 500 = 5%
-		// 0.33333*15 = 500
-		// 10500
+		System.out.println("\n---------------------------------------");
+				
+		netpayable = Math.round(principalAmount)+Math.round(amount);
+		System.out.println("\nNet payable Amount : " + (int)netpayable);
+	}
+	public static void main(String[] args)
+	{
+		System.out.println("\n===== Simple Interest =====");
+		simpleInterest();
 	}
 }  

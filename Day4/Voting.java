@@ -5,13 +5,12 @@ import java.util.Scanner;
 
 class Voting
 {
-	public static void main(String[] args)
+	public static void voting()
 	{
 		Scanner scan = new Scanner(System.in);
 		int voter_age;
-		String validate,name,gender,category;
-
-		System.out.println("\n ===== Checking Eligible For Voting ===== ");
+		String validate,category,name;
+		char gender;
 
 		System.out.print("\nName: ");
 		name = scan.next();
@@ -20,11 +19,16 @@ class Voting
 		voter_age = scan.nextInt();
 
 		System.out.print("Gender (M/F): ");
-		gender = scan.next();
+		gender = scan.next().charAt(0);
 
-		category =("Male" == gender )? "Mr":"Miss";
+		category = ('M' == gender || 'm' == gender) ? "Mr":"Miss";
 
-		validate = (voter_age > 18) ? "Eligible" : "Not Eligible";
-		System.out.println((category + " " + name)+" is "+ validate +" for Voting");
+		validate = (voter_age >=18) ? "Eligible" : "Not Eligible";
+		System.out.println("\n"+(category + " " + name)+" is "+ validate +" for Voting");
+	}
+	public static void main(String[] args)
+	{
+		System.out.println("\n ===== Checking Eligible For Voting ===== ");
+		voting();
 	}
 }

@@ -52,7 +52,7 @@ class TypeCasting
 		System.out.print("\nInteger Value: ");
 		integer = scan.nextInt();
 		
-		longer = Long.valueOf(integer);	
+		longer = integer;	
 		System.out.println("The Interger value " + integer + " is convert to Long: "+ longer);
 
 		System.out.print("\nLong Value: ");
@@ -109,7 +109,7 @@ class TypeCasting
 		System.out.print("\nCharacter Letter: ");
 		character = scan.next().charAt(0);
 		
-		integer = Character.getNumericValue(character);
+		integer = character-'0';
 		System.out.println("The Character Letter " + character + " is convert to Integer: "+ integer);
 
 		System.out.print("\nInteger Value: ");
@@ -147,7 +147,7 @@ class TypeCasting
 		System.out.print("\nCharacter: ");
 		character = scan.next().charAt(0);
 		
-		string = String.valueOf(character);
+		string = " " + character;
 		System.out.println("The Character " + character + " is convert to String: "+ string);
 
 		System.out.print("\nString: ");

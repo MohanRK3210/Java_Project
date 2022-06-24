@@ -3,12 +3,11 @@ import java.util.Scanner;
 
 class CutOff
 {
-	public static void main(String[] args)
+	public static void cutOff()
 	{
 		Scanner scan = new Scanner(System.in);
 		int biology,physics,chemistry,cutoff;
 
-		System.out.println("\n======= MBBS/BE CutOff Mark =======");
 		System.out.print("\nBiology Mark(200/200)  : ");
 		biology = scan.nextInt();
 
@@ -32,5 +31,10 @@ class CutOff
 		{
 			System.out.println("\nYou are Not Eligible for MBBS/BE.");
 		}
+	}
+	public static void main(String[] args)
+	{
+		System.out.println("\n======= MBBS/BE CutOff Mark =======");
+		cutOff();
 	}
 }

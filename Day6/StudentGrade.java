@@ -26,22 +26,61 @@ class StudentGrade
 
 		average = (tamil+english+math+science+social)/5;
 		System.out.println("\n ------------------------- ");
-	
+
 		if(average>=80)
 		{
-			System.out.println("The Student Grade will be A.");
+			System.out.println("Your Grade will be A.");
 		}
-		else if (average>=60 && average<80)
+		else if (average>=60 && average<80) 
 		{
-			System.out.println("The Student Grade will be B.");
+			System.out.println("Your Grade will be B.");
 		}
 		else if (average>=40 && average<60)
 		{
-			System.out.println("The Student Grade will be C.");
+			System.out.println("Your Grade will be C.");
 		}
 		else
 		{
-			System.out.println("The Student Grade will be D.");
+			System.out.println("Your Grade will be D.");
 		}
+
+		if(tamil >= 35)
+		{
+			if(english >= 35)
+			{
+				if(math >= 35)
+				{
+					if(science >= 35)
+					{
+						if(social >= 35)
+						{
+							System.out.println("\nYou Are Passed!.");
+						}
+						else
+						{
+							System.out.println("\nYou are Failed!.");
+						}
+						System.out.println("\nYou Are Passed!.");
+					}
+					else
+					{
+						System.out.println("\nYou are Failed!.");
+					}
+					System.out.println("\nYou Are Passed!.");
+				}
+				else
+				{
+					System.out.println("\nYou are Failed!.");
+				}
+			}
+			else
+			{
+				System.out.println("\nYou are Failed!.");
+			}
+		}
+		else
+		{
+			System.out.println("\nYou are Failed!.");
+		}	
 	}
 }

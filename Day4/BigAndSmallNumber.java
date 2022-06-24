@@ -5,13 +5,11 @@ import java.util.Scanner;
 
 class BigAndSmallNumber
 {
-	public static void main(String[] args)
+	public static void bigAndSmallNumber()
 	{
 		int num1,num2,num3,biggestResult,smallestResult;
 
 		Scanner scan = new Scanner(System.in);
-		System.out.println("\n===== Find The Biggest and Smallest Number ===== ");
-
 		System.out.print("\nFirst Value: ");
 		num1 = scan.nextInt();
 
@@ -30,5 +28,10 @@ class BigAndSmallNumber
 		System.out.println("\n ===== Result ===== ");
 		System.out.println("\n The Biggest Number is: "+ biggestResult);
 		System.out.println(" The Smallest Number is: "+ smallestResult);
+	}
+	public static void main(String[] args)
+	{
+	System.out.println("\n===== Find The Biggest and Smallest Number ===== ");
+	bigAndSmallNumber();
 	}
 }

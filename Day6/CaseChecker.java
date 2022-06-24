@@ -12,13 +12,17 @@ class CaseChecker
 		System.out.print("\nEnter your Character: ");
 		check = scan.next().charAt(0);
 
-		if (Character.isUpperCase(check))
+		if (check >= 'A' && check <= 'Z' )
 		{
-			System.out.println("Character is Upper Case!.");
+			System.out.println("\nCharacter is Upper Case!.");
+		}
+		else if(check >= 'a' && check <+'z')
+		{
+			System.out.println("\nCharacter is Lower Case!.");
 		}
 		else
 		{
-			System.out.println("Character is Lower Case!.");
+			System.out.println("\n"+check + " is Not Alphabets");
 		}
 	}
 }

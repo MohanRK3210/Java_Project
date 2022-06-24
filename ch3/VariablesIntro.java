@@ -3,7 +3,7 @@ Initialize the Packages
 */
 class VariablesIntro
 {
-	public static void main(String[] args)
+	public static void variablesIntro()
 	{
 		int a;  // declare a Variable
 		a = 10; // Initialize the value
@@ -15,5 +15,10 @@ class VariablesIntro
 		int c = a; // The Variable a value to store variable c
 		// print the value c
 		System.out.println("Variable c value is: "+c); // (+) Symbol is Correlation 
+	
+	}
+	public static void main(String[] args)
+	{
+		variablesIntro();
 	} // End of main method
 } // End of VariablesIntro Class

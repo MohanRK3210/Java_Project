@@ -5,66 +5,71 @@ class Measurement{
 	public static void cmToMeter()
 	{
 		// cm/100
-		float centimeter,centimeterToMeter;
+		long centimeter,centimeterToMeter,meter;
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("\nYour Centimeter Value: ");
-		centimeter = scan.nextFloat();
+		centimeter = scan.nextLong();
 
 		centimeterToMeter = centimeter/100;
-		System.out.println("The Centimeter value is "+ centimeter + " To Convert Meter Value is " + centimeterToMeter);
+		meter = centimeter-(centimeterToMeter*100); 
+		System.out.println("The Centimeter is "+ centimeter + ",To Convert Meter Value is :" + centimeterToMeter + " Balance Centimeter is: "+ meter);
 	}
 	
 	public static void meterToKilometer()
 	{
 		// meter/1000
-		float meter,meterToKilometer;
+		long meter,meterToKilometer,kiloMeter;
 		Scanner scan = new Scanner(System.in);
 
 		System.out.print("\nYour Meter Value: ");
-		meter = scan.nextFloat();
+		kiloMeter = scan.nextLong();
 		
-		meterToKilometer = meter/1000;
-		System.out.println("The Meter Value is " + meter +" to Convert Kilometer value is "+ meterToKilometer);
+		meterToKilometer = kiloMeter/1000;
+		meter = kiloMeter-(meterToKilometer*1000); 
+		System.out.println("The Meter value is " + kiloMeter +" to Convert Kilometer is "+ meterToKilometer +" Balance Meter is: "+ meter);
 	}
 	
 	public static void inchesToFeet()
 	{
 		// user input/12
-		float inches,inchesToFeet;
+		long inches,inchesToFeet,feet;
 		Scanner scan = new Scanner(System.in);
 
 		System.out.print("\nYour inches Value: ");
-		inches = scan.nextFloat();
+		feet = scan.nextLong();
 		
-		inchesToFeet = inches/12;
-		System.out.println("The inches Value is " + inches +" to Convert Feet value is "+ inchesToFeet);
+		inchesToFeet = feet/12;
+		inches = feet-(inchesToFeet*12);
+		System.out.println("The inches Value is " + feet +" to Convert Feet is: "+ inchesToFeet +" Balance inches is: "+ inches);
 	}
 	
 	public static void sqftToCent()
 	{
 		// userinput/436
-		float sqft,sqftToCent;
+		long sqft,sqftToCent,cent;
 		Scanner scan = new Scanner(System.in);
 
 		System.out.print("\nSquare feet Value: ");
-		sqft = scan.nextFloat();
+		cent = scan.nextLong();
 		
-		sqftToCent = sqft/436;
-		System.out.println("The Square Feet Value is " + sqft +" to Convert Cent value is "+ sqftToCent);
+		sqftToCent = cent/436;
+		sqft = cent-(sqftToCent*436);
+		System.out.println("The Square Feet Value is " + cent +" to Convert Cent value is: "+ sqftToCent + " Balance SquareFeet is: "+ sqft);
 	}
 	
 	public static void gramToKilogram()
 	{
 		// userinput/1000
-		float gram,gramToKilogram;
+		long gram,gramToKilogram,kiloGram;
 		Scanner scan = new Scanner(System.in);
 
 		System.out.print("\nYour gram Value: ");
-		gram = scan.nextFloat();
+		kiloGram = scan.nextLong();
 		
-		gramToKilogram = gram/1000;
-		System.out.println("The Gram Value is " + gram +" to Convert Kilogram value is "+ gramToKilogram);
+		gramToKilogram = kiloGram/1000;
+		gram = kiloGram-(gramToKilogram*1000);
+		System.out.println("The Gram Value is " + kiloGram +" to Convert Gram  is: "+ gramToKilogram + " Balance gram is: "+ gram);
 	}
 	
 	public static void rupeesToDollar()

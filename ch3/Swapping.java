@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 class Swapping
 {
-	public static void main(String[] args)
+	public static void swapping()
 	{
-		// Declare the Variable 
+			// Declare the Variable 
 		int value1,value2;
 		Scanner scan = new Scanner(System.in);
 		
@@ -29,5 +29,10 @@ class Swapping
 		System.out.println("\n====== After Swapping ====== ");
 		System.out.println("\nAfter First Value:  " + value1);
 		System.out.println("\nAfter Second Value: " + value2);
+	}
+
+	public static void main(String[] args)
+	{
+		swapping();
 	} // End of main
 } // End of Swapping Class

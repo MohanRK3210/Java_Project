@@ -5,12 +5,11 @@ import java.util.Scanner;
 
 class BiggestTwoNumber
 {
-	public static void main(String[] args)
+	public static void biggestTwoNumber()
 	{
 		Scanner scan = new Scanner(System.in);
 		// Declare variable
 		int num1,num2;
-		System.out.println(" ===== Find The Biggest Number ===== ");
 
 		System.out.print("\nFirst Number: ");
 		num1 = scan.nextInt();
@@ -19,5 +18,12 @@ class BiggestTwoNumber
 		num2 = scan.nextInt();
 
 		System.out.println(Math.max(num1,num2) + " is greater ");
+	}
+
+	public static void main(String[] args)
+	{
+		
+		System.out.println(" ===== Find The Biggest Number ===== ");
+		biggestTwoNumber();
 	}
 }

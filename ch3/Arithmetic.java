@@ -3,7 +3,7 @@ Initialize the Packages
 */
 class Arithmetic
 {
-	public static void main(String[] args)
+	public static void arithmetic()
 	{
 		// Store the value
 		double a,b,c,d;
@@ -17,5 +17,10 @@ class Arithmetic
 		System.out.println("Option B: " + b);
 		System.out.println("Option C: " + c);
 		System.out.println("Option D: " + d);
+	
+	}
+	public static void main(String[] args)
+	{
+		arithmetic();
 	}
 }

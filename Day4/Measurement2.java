@@ -2,13 +2,11 @@ import java.util.Scanner;
 
 class Measurement
 {
-	public static void main(String[] args)
-	{
 
+	public static void measurement()
+	{
 	Scanner scan = new Scanner(System.in);
 	long centimeter,kilometer,meter,feet,cms;
-
-	System.out.println("\n===== Measurement ===== ");
 
 	System.out.print("\nCentimeter Value: ");
 	centimeter = scan.nextLong();
@@ -29,5 +27,12 @@ class Measurement
 	centimeter = centimeter-(feet*30); // 70-(2*30)= 
 	
 	System.out.println(("\n"+ kilometer + " Kilometres ") + ( meter + " Meters ") + ( feet + " Feet ") + ( centimeter + " centimeter "));
+	}
+
+	public static void main(String[] args)
+	{
+
+	System.out.println("\n===== Measurement ===== ");
+	measurement();
 	}
 }
