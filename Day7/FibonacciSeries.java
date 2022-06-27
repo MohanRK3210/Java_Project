@@ -5,6 +5,7 @@ class FibonacciSeries
 	public static void fibonacciSeries()
 	{
 		int firstNumber = 0,secondNumber = 1,thirdNumber,numberOfTime = 1;
+		
 		while(numberOfTime<=10)
 		{
 			System.out.print(firstNumber+ ",");//0,1,2,

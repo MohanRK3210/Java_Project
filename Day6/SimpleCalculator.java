@@ -54,12 +54,12 @@ class SimpleCalculator
 			System.out.println("\nyour choice is Invalid");
 		}
 
-		// System.out.println("\n--------------------------------------------");
+		System.out.println("\n--------------------------------------------");
 		
-		// System.out.println("\nAddition of Two Number         : " + addition);
-		// System.out.println("Subtraction of Two Number      : " + subtraction);
-		// System.out.println("Multiplication of Two Number   : " + multiplication);
-		// System.out.println("Division of Two Number         : " + division);
-		// System.out.println("Modulo Division of Two Number  : " + moduloDivision);
+		System.out.println("\nAddition of Two Number         : " + addition);
+		System.out.println("Subtraction of Two Number      : " + subtraction);
+		System.out.println("Multiplication of Two Number   : " + multiplication);
+		System.out.println("Division of Two Number         : " + division);
+		System.out.println("Modulo Division of Two Number  : " + moduloDivision);
 	}
 }
