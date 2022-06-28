@@ -6,10 +6,10 @@ class FibonacciSeries
 	{
 		Scanner scan = new Scanner(System.in);
 		int firstNumber,secondNumber,thirdNumber;
-		int n;
+		int numberOfTime;
 
 		System.out.print("\nNumber Of Time: ");
-		n = scan.nextInt();
+		numberOfTime = scan.nextInt();
 
 		System.out.print("First Number: ");
 		firstNumber = scan.nextInt();
@@ -17,14 +17,21 @@ class FibonacciSeries
 		System.out.print("Second Number: ");
 		secondNumber= scan.nextInt();
 		System.out.println("\n---------------------------");
-		
-		for(int i=1;i<=n; ++i)
+		if(numberOfTime>=2)
+		{
+			for(int i=1;i<=numberOfTime; ++i)
 		{
 			System.out.print(firstNumber+ ",");
 			thirdNumber = firstNumber + secondNumber;
 			firstNumber = secondNumber;
 			secondNumber = thirdNumber; 
 		}
+	}
+		else
+		{
+			System.out.println("\nYour value is lower then 2.");
+		}
+		
 	}
 
 	public static void main(String[] args)

@@ -20,10 +20,13 @@ public class ArmStrong
          check = check/10;//370/10=37,37/10=3,3/10=0;
       }
       
-      if(number==compare)
+      if(number==compare){
+
          System.out.println("\n"+number+ " is Armstrong Number.");
-      else
+      }
+      else{
          System.out.println("\n"+number+ " is Not an Armstrong Number.");
+      }
    }
 
    public static void main(String[] args)

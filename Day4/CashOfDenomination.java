@@ -14,19 +14,19 @@ class CashOfDenomination
 	amount = scan.nextInt();
 
 	rupees2000 = (amount>=2000)?(amount/2000):0;
-	amount = amount-(rupees2000*2000); 
+	amount = amount%2000; 
 	
 	rupees500 = (amount>=500)?(amount/500):0;
-	amount = amount-(rupees500*500); 
+	amount = amount%500; 
 
 	rupees100 = (amount>=100)?(amount/100):0;
-	amount = amount-(rupees100*100); 
+	amount = amount%100; 
 	
 	rupees50 = (amount>=50)?(amount/50):0;
-	amount = amount-(rupees50*50); 
+	amount = amount%2000; 
 	
 	rupees10 = (amount>=10)?(amount/10):0;
-	amount = amount-(rupees10*10); 
+	amount = amount%10; 
 
 	total = (rupees2000*2000)+(rupees500*500)+(rupees100*100)+(rupees50*50)+(rupees10*10)+amount;
 

@@ -7,7 +7,8 @@ class PrimeOrNot
 		int num;
 		Scanner scan = new Scanner(System.in);
 		String prime = "yes";
-
+		//boolean bool = true;
+		 
 		System.out.print("\nEnter the Value: ");
 		num = scan.nextInt();
 		
@@ -18,10 +19,11 @@ class PrimeOrNot
 				if(num%i == 0) // 4%2 == 0
 				{
 					prime = "no";
+					//bool = false;
 					break;
 				}
 			}
-			if(prime == "yes")
+			if(prime == "yes")//(bool = true)
 			{
 				System.out.println(num +" is Prime Number");
 			}

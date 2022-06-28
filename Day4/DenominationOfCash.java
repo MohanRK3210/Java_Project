@@ -29,12 +29,12 @@ class DenominationOfCash
 
 		System.out.println("\n===== Rupees To Denomination ===== ");
 
-		r2000 =(rupees2000*2000); 
-		r500 =(rupees500*500); 
-		r200 =(rupees200*200); 
-		r100 =(rupees100*100); 
-		r50 =(rupees50*50); 
-		r10 =(rupees10*10); 
+		r2000 = rupees2000*2000; 
+		r500 = rupees500*500; 
+		r200 = rupees200*200; 
+		r100 = rupees100*100; 
+		r50 = rupees50*50; 
+		r10 = rupees10*10; 
 		
 		total = r2000+r500+r100+r50+r10;
 		System.out.println("\n2000 X "+rupees2000+ " = " +r2000);
