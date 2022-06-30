@@ -17,6 +17,7 @@ class FibonacciSeries
 		System.out.print("Second Number: ");
 		secondNumber= scan.nextInt();
 		System.out.println("\n---------------------------");
+
 		if(numberOfTime>=2)
 		{
 			for(int i=1;i<=numberOfTime; ++i)

@@ -4,6 +4,7 @@ class FibonacciSeries
 {
 	public static void fibonacciSeries()
 	{
+		System.out.println("\n===== Fibonacci Series =====");
 		int firstNumber = 0,secondNumber = 1,thirdNumber,numberOfTime = 1;
 		
 		while(numberOfTime<=10)
@@ -18,7 +19,6 @@ class FibonacciSeries
 	
 	public static void main(String[] args)
 	{
-		System.out.println("\n===== Fibonacci Series =====");
 		fibonacciSeries();
 		System.out.println();
 	}

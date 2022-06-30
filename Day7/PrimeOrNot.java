@@ -14,7 +14,7 @@ class PrimeOrNot
 		
 		if(num >=2)//4
 		{
-			for(int i=2;i<= num/2;i++)// 2<=4
+			for(int i=2;i<= num;i++)// 
 			{
 				if(num%i == 0) // 4%2 == 0
 				{

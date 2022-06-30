@@ -4,8 +4,10 @@ class Voting
 {
 	public static void voting()
 	{
+		System.out.println("\n===== Voter Identification =====");
+
 		Scanner scan = new Scanner(System.in);
-		int voter_age,candidate=0,maleGenderCount=0,femaleGenderCount=0;
+		int voterAge,candidate=0,maleGenderCount=0,femaleGenderCount=0,overAllEligible=0,maleEligible=0,femaleEligible=0;
 		String validate,category,name;
 		char gender,rentry;
 
@@ -15,37 +17,99 @@ class Voting
 			name = scan.next();
 
 			System.out.print("Age: ");
-			voter_age = scan.nextInt();
+			voterAge = scan.nextInt();
+			
+			if(voterAge>=18)
+			{
+				overAllEligible++;
+			}
+			else
+			{
+				overAllEligible = overAllEligible;
+			}
 
 			System.out.print("Gender (M/F): ");
 			gender = scan.next().charAt(0);
 
-			candidate = candidate+1;
-			maleGenderCount = ('M'== gender || 'm' == gender)? maleGenderCount+1:maleGenderCount;
-			femaleGenderCount = ('F'== gender || 'f' == gender)? femaleGenderCount+1:femaleGenderCount;
-
+			if(('M' == gender) ||('m' == gender))
+			{
+				maleGenderCount++;
+				if(voterAge>=18)
+				{
+					maleEligible++;
+				}
+				else
+				{
+					maleEligible = maleEligible;
+				}
+			}
+			else if(('F' == gender)||('f' == gender))
+			{
+				femaleGenderCount++;
+				if(voterAge>=18)
+				{
+					femaleEligible++;
+				}
+				else
+				{
+					femaleEligible = femaleEligible;
+				}
+			}
+			else
+			{
+				do{
+					System.out.println("Invalid Gender.");
+					System.out.print("\nGender (M/F): ");
+					gender = scan.next().charAt(0);
+					if(('M' == gender) ||('m' == gender))
+			{
+				maleGenderCount++;
+				if(voterAge>=18)
+				{
+					maleEligible++;
+				}
+				else
+				{
+					maleEligible = maleEligible;
+				}
+			}
+			else if(('F' == gender)||('f' == gender))
+			{
+				femaleGenderCount++;
+				if(voterAge>=18)
+				{
+					femaleEligible++;
+				}
+				else
+				{
+					femaleEligible = femaleEligible;
+				}
+			}
+		}while(('M' != gender) && ('m' != gender)&&('F' != gender) && ('f' != gender));
+	}
+			
+			candidate++;//0+1=1,2
 
 			category = ('M' == gender || 'm' == gender) ? "Mr":"Mrs";
-			validate = (voter_age >=18) ? "Eligible" : "Not Eligible";
+			validate = (voterAge >=18) ? "Eligible" : "Not Eligible";
 			System.out.println((category + " " + name)+" is "+ validate +" for Voting");
-			System.out.print("\nContinue the Voting Process[Y/N]:");		
+			System.out.print("\nContinue the Voting Process[Y/N]:");	//y	
 			rentry = scan.next().charAt(0);
 			
 		}
-		while((rentry =='Y') ||(rentry == 'y'));
+		while((rentry =='Y') ||(rentry == 'y'));//n
 
-		if((rentry == 'N')||(rentry == 'n'))
-		{
 			System.out.println("\n===== Voting Report =====");
-			System.out.println("Number of candidated Visited = " + candidate);
-			System.out.println("Number of Male Count = " + maleGenderCount);
-			System.out.println("Number of Female Count = " + femaleGenderCount);
-		}
+			System.out.println("Candidated Visited = " + candidate);
+			System.out.println("Male Count = " + maleGenderCount);
+			System.out.println("Female Count = " + femaleGenderCount);
+			System.out.println("over All Eligible = " + overAllEligible);
+			System.out.println("Male Eligible = " + maleEligible);
+			System.out.println("Female Eligible = " + femaleEligible);
 	}
 
 	public static void main(String[] args)
 	{
-		System.out.println("\n===== Voter Identification =====");
 		voting();
 	}
 }
