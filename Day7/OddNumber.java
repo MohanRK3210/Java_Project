@@ -1,24 +1,38 @@
-import java.util.Scanner;
+import java.util.Scanner; 
+ 
+class OddNumber
+{
+	public static void oddNumber()
+	{
+		int firstNumber,secondNumber,check,numberOfOdd =0;
+		Scanner scan=new Scanner(System.in);
+	
+		System.out.print("\nThe starting range:"); 
+		firstNumber=scan.nextInt();//2
+	
+		System.out.print("The ending range:"); 
+    	secondNumber=scan.nextInt();//5
 
-class OddNumber{
+    	check = firstNumber;//2
 
-public static void main (String args[]){
-	int r,i;
-	Scanner scan=new Scanner(System.in);
-	
-	System.out.print("Enter the first number for the range: ");
-	int num1=scan.nextInt();//reads num1 from user
-	
-	System.out.print("Enter the second number for the range: ");
-	int num2=scan.nextInt();//reads num2 from user
-	
-	System.out.print("\nDisplay the odd numbers between "+num1+" and "+num2+" are :");
-	
-	for(i=num1; i<=num2; i++)
-		{
-			r=i%2; 
-			if(r==1) 
-			System.out.println(i);
-		}
+    	while(check<=secondNumber)
+    	{
+    	//(2<=5),(3<=5),(4<=5),(5<=5)
+    		if(check%2 != 0)
+    		{
+    			numberOfOdd++;
+    			check++;
+    		}
+    		else
+    		{
+    			numberOfOdd =  numberOfOdd;
+    			check++;
+    		}
+    	}
+    	System.out.println("Number of Odd Number for Given Range: " +numberOfOdd);
 	}
+  public static void main(String args[]) 
+ {
+ 	oddNumber();
+ }
 }

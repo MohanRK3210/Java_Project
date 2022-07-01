@@ -11,6 +11,7 @@ public class Palindrome {
         int originalNumber = number;//1001
         int reminder = 0;
         int reversedNumber = 0;
+        
         while (number != 0) {
            //(1001 != 0)->true,(100 != 0)->true,(10 != 0)->true,(1 != 0)->true,
             reminder = number % 10;//1001%10 = 1,100%10 = 0,10%10=0,1%10=1,

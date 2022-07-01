@@ -5,26 +5,29 @@ class BigAndSmall
   public static void bigAndSmall()
   {
     Scanner scan =new Scanner(System.in); 
-    int number,biggest,smallest,current;
-    
-    System.out.print("\nNumber of values:");
-    number=scan.nextInt(); 
+    int number,check,biggest,smallest,current;
     
     biggest = Integer.MIN_VALUE;
     smallest = Integer.MAX_VALUE; 
     
-    System.out.println("Enter the values:"); 
-    for(int i=1;i<=number;i++) 
+    System.out.print("\nCheck Number of Times: ");
+    number=scan.nextInt(); //5
+
+    System.out.println("\nThe Value is: "); 
+
+
+    for(check=1;check<=number;check++) 
     { 
+      //(1<5,2)
       current = scan.nextInt(); 
-      if (current > biggest)  
+
+      if (current>biggest)  
       { 
        biggest = current; 
       }  
-      if (current < smallest)  
+      else if(current<smallest)  
       {  
-       smallest = current; 
- 
+       smallest = current;
       } 
   } 
   System.out.println("\nThe Biggest Number is:" + biggest); 
@@ -36,4 +39,3 @@ class BigAndSmall
   bigAndSmall();
  }
 } 
- 

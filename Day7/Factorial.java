@@ -26,23 +26,23 @@ class Factorial
         	//(1*1=1),(1*2=2)(2*3=6)(6*4=24)
         	//(1*1=1)
         }
-         check = check/10;//(145/10=14)(14/10=1)(1/10=0)
-         compare = compare+(factorial);//(0+120=120)(120+24=144)(144+1=145)
-         factorial = factorial/factorial;//(120/120=1),(24/24=1)(1/1=1)
-         }
-         if(number==compare)
-         {
-         	System.out.println("\nThe Given Number is "+number+ " and the Factorial  of"+compare+" is an Factorial Number.");
-         }
-         else
-         {
-         	System.out.println("\nThe Given Number is "+number+ " and the Factorial of "+compare+" is Not an Factorial Number.");
-         }
-     }
+        check = check/10;//(145/10=14)(14/10=1)(1/10=0)
+        compare = compare+(factorial);//(0+120=120)(120+24=144)(144+1=145)
+        factorial = factorial/factorial;//(120/120=1),(24/24=1)(1/1=1)
+      }
+      if(number==compare)
+      {
+        System.out.println("\nThe Given Number is "+number+ " and the Factorial  of"+compare+" is an Factorial Number.");
+      }
+      else
+      {
+        System.out.println("\nThe Given Number is "+number+ " and the Factorial of "+compare+" is Not an Factorial Number.");
+      }
+    }
 
-   public static void main(String[] args)
-   {
+    public static void main(String[] args)
+    {
       System.out.println("\n===== Find the Factorial =====");
       factorial();
-   }
+    }
 }
