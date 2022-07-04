@@ -1,30 +1,30 @@
+//example-1
+
 import java.util.Scanner;
 
 class StarPatternLeft
 {
 	public static void starPatternLeft()
 	{
+		System.out.println("\n===== Increasing Left Triangle Star Pattern =====");
+
 		int rows;
 		Scanner scan = new Scanner(System.in);
-
-		System.out.println("\n===== Left Increament Triangle Pattern");
-
 		System.out.print("\nNumber of Rows: ");
 		rows = scan.nextInt();
+		System.out.println();
 
 		for(int rowCheck=1;rowCheck<=rows;rowCheck++)
 		{
-			for(int invisible=rows;invisible>=rowCheck;invisible--)
+			for(int colCheck=1;colCheck<=rowCheck;colCheck++)
 			{
-				System.out.print("- ");
-			}
-			for(int colcheck=1;colcheck<=rowCheck;colcheck++)
-			{
-				System.out.print(colcheck+" ");
+				System.out.print("* ");
 			}
 			System.out.println();
 		}
+
 	}
+
 	public static void main(String[] args)
 	{
 		starPatternLeft();
