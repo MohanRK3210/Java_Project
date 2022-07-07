@@ -1,42 +1,47 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-class SecondLargestArray
+class demo
 {
-	public static void secondLargestArray()
+	public static void main(String[] args)
 	{
-		int array,temp;
+		int array,secondlongest;
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("\nNumber of Value in array: ");
-		array = scan.nextInt();//5
-
-		int index[] = new int[array];
+		array = scan.nextInt();//5	
+		if(array>=2)
+		{
+			float index[] = new float[array];
+		float largest=0,secondlargest=0,check=0;
 		
 		System.out.println("\nNumber of index Value: ");
 		for(int i=0;i<array;i++)
 		{
 			//(0<5,1),(1<5,2),(2<5,3)(3<5,4),(4<5,5)-(5<5,6)
-			index[i]=scan.nextInt();//1,3,2,5,2
+			index[i]=scan.nextFloat();// 2,3,5,4,6
 		}
-		System.out.println("\nNumber of Array is: "+array+" ,and the Value is: "+ Arrays.toString(index));
+		largest=index[1];
+		secondlargest=index[0];
 		for(int i=0;i<array;i++)
 		{
-			for(int j=i+1;j<array;j++)
+			check=index[i];
+			if(check>largest)
 			{
-				if(index[i]>index[j])
-				{
-					temp = index[i];
-					index[i]=index[j];
-					index[j]=temp;
-				}
+				secondlargest=largest;
+				largest=check;
+			}
+			else if(check>secondlargest && check<largest)
+			{
+				secondlargest=check;
 			}
 		}
-		System.out.println("\nSecond Largest Number is: "+index[array-2]);
-	}
-	
-	public static void main(String[] args)
+		System.out.println(secondlargest);
+	}	
+	else
 	{
-		secondLargestArray();
+		System.out.println("Please Insert Minimum Value is: 2 ");
 	}
+	}
+		
 }
