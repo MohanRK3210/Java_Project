@@ -1,9 +1,9 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-class demo
+class SecondLargestArray
 {
-	public static void main(String[] args)
+	public static void secondLargestArray();
 	{
 		int array,secondlongest;
 		Scanner scan = new Scanner(System.in);
@@ -41,7 +41,12 @@ class demo
 	else
 	{
 		System.out.println("Please Insert Minimum Value is: 2 ");
+	  }
 	}
+
+	public static void main(String[] args)
+	{
+	SecondLargestArray();	
 	}
 		
 }

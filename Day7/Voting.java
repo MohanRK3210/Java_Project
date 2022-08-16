@@ -62,17 +62,17 @@ class Voting
 					System.out.print("\nGender (M/F): ");
 					gender = scan.next().charAt(0);
 					if(('M' == gender) ||('m' == gender))
-			{
-				maleGenderCount++;
-				if(voterAge>=18)
-				{
-					maleEligible++;
+					{
+						maleGenderCount++;
+						if(voterAge>=18)
+					{
+						maleEligible++;
+					}
+					else
+					{
+						maleEligible = maleEligible;
 				}
-				else
-				{
-					maleEligible = maleEligible;
-				}
-			}
+					}
 			else if(('F' == gender)||('f' == gender))
 			{
 				femaleGenderCount++;
