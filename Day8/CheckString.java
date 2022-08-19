@@ -5,22 +5,33 @@ public class CheckString
    public static void checkString()
    {
       Scanner scan = new Scanner(System.in);
-      System.out.println("Enter your Sentence: ");
+      System.out.print("\nGiven string: ");
       String str=scan.nextLine();
+      //System.out.println(str);
 
-      System.out.println("Find String: ");
-      String found=scan.nextLine();
+      System.out.print("\nFind the String: ");
+      String find = scan.next();
+      System.out.println(find);
 
-      boolean check = str.contains(found);
-      if(check)
+      String[] strArray = str.split(" ");
+      // int count = strArray.length();
+      boolean check= true;
+      for(int i=0;i<strArray.length;i++)
       {
-      	System.out.println(found+" is preset in the Sentence.");
+         if(find != strArray[i])
+         {
+            check=false;
+            break;
+         }
+      }
+      if(check==true)
+      {
+         System.out.println(find+" is Find.");
       }
       else
       {
-      	System.out.println(found+" is not present.");
+         System.out.println(find+" is Not Find.");
       }
-      
       }
 
    public static void main(String[] args)

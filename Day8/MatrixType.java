@@ -7,35 +7,10 @@ class MatrixType
 	{
 		int index,f=0;
 		Scanner scan = new Scanner(System.in);
-		System.out.print("Number of Matrix Size is: ");
-		index= scan.nextInt();
+		System.out.print("\nNumber of Matrix Size is: ");
+		index= scan.nextInt();//3
 
-		int[][] array = new int[index][index];
-		int[][] array1= new int[index][index];
-		for(int i=0;i<index;i++)
-		{
-			for(int j=0;j<index;j++)
-			{
-				if(i==j)
-				{
-					array1[i][j]=1;
-				}
-				else
-				{
-					array1[i][j]=0;
-				}
-			}
-		}
-
-		System.out.println("Matrix is");
-			for(int i=0;i<index;i++)
-			{
-				for(int j=0;j<index;j++)
-				{
-					System.out.print(array1[i][j]+" ");
-				}
-				System.out.println();
-			}
+		int[][] array = new int[index][index];//3X3
 			
 		System.out.println("Matrix is Identity Matrix");
 		
@@ -55,7 +30,7 @@ class MatrixType
 				}
 			}
 		}
-		System.out.println("Matrix is");
+		System.out.println("\nMatrix is");
 		for(int i=0;i<index;i++)
 		{
 			for(int j=0;j<index;j++)
@@ -70,6 +45,11 @@ class MatrixType
 		{
 			for(int j=0;j<index;j++)
 			{
+				if (i==j && array[i][j] == 1) 
+				{
+					f=2;
+					break;
+				}
 				if(i==j && array[i][j] != 1)
 				{
 					f=1;
@@ -86,11 +66,15 @@ class MatrixType
 
 		if(f==0)
 		{
-			System.out.println("Matrix is Identity & Scalar Matrix");
+			System.out.println("\nMatrix is Scalar Matrix");
+		}
+		else if(f==2)
+		{
+			System.out.println("\nMatrix is Identity Matrix");
 		}
 		else
 		{
-			System.out.println("This Matrix is Diagonal Matrix.");
+			System.out.println("\nThis Matrix is Diagonal Matrix.");
 		}
 	}
 	public static void main(String[] args)

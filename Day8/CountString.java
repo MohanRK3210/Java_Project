@@ -5,18 +5,20 @@ public class CountString
    public static void countString()
    {
       Scanner scan = new Scanner(System.in);
-      System.out.println("Enter your String: ");
+      System.out.println("Enter your Sentence: ");
       String str=scan.nextLine();
-
+      int count = str.length();
+      char[] ch = new char[count];
       int vowels=0,words=0,specialChar=0,digit=0;
 
-      for(int i=0;i<str.length();i++)
+      for(int i=0;i<count;i++)
       {
-         char ch = str.charAt(i);
-         if((ch>='a' && ch<='z')||(ch>='A' && ch<='Z'))
+         ch[i] = str.charAt(i);
+
+         if((ch[i]>='a' && ch[i]<='z')||(ch[i]>='A' && ch[i]<='Z'))
          {
-            ch = Character.toLowerCase(ch);
-            if(ch == 'a' || ch == 'e' || ch== 'i' || ch == 'o' || ch == 'u')
+            ch[i] = Character.toLowerCase(ch[i]);
+            if(ch[i] == 'a' || ch[i] == 'e' || ch[i] == 'i' || ch[i] == 'o' || ch[i] == 'u')
             {
                ++vowels;
             }
@@ -26,7 +28,7 @@ public class CountString
 
             }
          }
-         else if(ch >= '0' && ch<='9')
+         else if(ch[i] >= '0' && ch[i]<='9')
          {
             ++digit;
          }
