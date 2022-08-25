@@ -204,7 +204,7 @@ public class Banking
         		 System.out.print("\nEmployee Name: ");
  	             String name = scan.next();
  	             System.out.print("category Work: ");
- 	             String category-89 = scan.next();
+ 	             String category = scan.next();
  	             System.out.print("Salary: ");
  	             double money = scan.nextDouble();
 
