@@ -1,0 +1,20 @@
+Banking Process:
+new account opening,closing the account,Passbook provide,Debit card provide,Account correction,personal Loan & Gold Loan provide.checkBook provide.Credit card provide.account/mobile/aadhar/pan linked process.
+
+client Attributes;
+customer name,mobile number,email id,aadhar card,pan card,address,customer signature.
+
+Deposit:
+date,account number,account holder name,depositer detail,contact number,deposit amount,denamination,depositer sign,branch,ifsc code,cheque attached or not.
+
+Withdrawal:
+date,account number,account holder name,,contact number,deposit amount,denamination,account owner sign,branch,ifsc code,cheque attached or not.
+
+New Account:
+
+Customer Name,Account Number,Mobile Number,AadharCard,Pan card,pass/cheque book apply,customer signature.already have an account or not,debit card apply,nominee.
+
+Personal/gold Loan:
+
+Account number,customer Name,Mobile Number,nominee ,nominee account number,nominee name,signature.nominee contanct number.
+

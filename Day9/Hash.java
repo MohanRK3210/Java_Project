@@ -1,33 +1,116 @@
 import java.util.Scanner;
 import java.util.*;
 
-class Hash
+class OpenAccount
+{
+	private int accountNumber;
+	private String customerName;
+	private int openingBalance;
+	
+	public void setAccountNumber(int accNumber)
+	{
+		this.accountNumber = accNumber;
+	}
+
+	public int getAccountNumber()
+	{
+		return accountNumber;
+	}
+
+	public String  getCustomerName()
+	{
+		return customerName;
+	}
+
+	public void setCustomerName(String customer)
+	{
+		this.customerName = customer;
+	}
+
+	public int getOpeningBalance()
+	{
+		return openingBalance;
+	}
+
+	public void setOpeningBalance(int balance)
+	{
+		this.openingBalance = balance;
+	}
+
+}
+
+class Banking
 {
 	public static void main(String[] args)
 	{
-		HashMap hm = new HashMap();
-		hm.put(1,"Mohan");
-		hm.put(2,"Raj");
-		System.out.println("\nHashMap One:"+hm);
-		hm.put(1,"MohanRaj");
-		System.out.println("\nHashMap One:"+hm);
+		int choice,accountNumber,openingBalance;
+		String customerName;
 
-		HashMap hm2 = new HashMap();
-		hm2.putAll(hm);
-		System.out.println("\nHashMap Two:"+hm2);
-		System.out.println("\n"+hm2.get(1));
+		do
+		{
+			Scanner scan = new Scanner(System.in);
+			System.out.print("\n===== Banking Process =====\n");
+			System.out.print("\n 1. Account Opening");
+			System.out.print("\n 2. Loan Apply");
+			System.out.print("\n 3. Closing the Application");
+			System.out.println();
+			System.out.print("\nSelect your choice: ");
+			choice = scan.nextInt();
 
-		System.out.println("\n"+hm2.containsKey(2));
-
-		System.out.println("\n"+hm2.containsValue("MohanRaj"));
-		hm2.remove(2);
-		System.out.println("\nHashMap Two:"+hm2);
-		System.out.println("\nSize of HashMap: "+hm2.size());
-
-		System.out.println("\nHashMap is Empty or Not: "+hm2.isEmpty());
-		hm2.clear();
-
-		System.out.println("\nHashMap is Empty or Not: "+hm2.isEmpty());			
+		
+			switch(choice)
+			{
+				case 1:
+						HashMap hm = new HashMap();
+						
+						for(int i=0;i<1;i++)
+						{
+							System.out.println("\n===== Opening New Account =====");
+							System.out.print("\nAccount Number: ");
+							accountNumber = scan.nextInt();
+							System.out.print("Customer Name: ");
+							customerName = scan.next();
+							System.out.print("Opening Balance: ");
+							openingBalance = scan.nextInt();
+							OpenAccount op = new OpenAccount();
+							op.setAccountNumber(accountNumber);
+							op.setCustomerName(customerName);
+							op.setOpeningBalance(openingBalance);
+							// System.out.println("\nAccount Number: "+ op.getAccountNumber());
+							hm.put(op.getAccountNumber(),op.getCustomerName(),op.getOpeningBalance());
+							System.out.println("\nSearch an Account Details");
+							int search = scan.nextInt();
+							System.out.println("\n"+hm.get(search));
+						}
+						break;
+				case 2:
+						break;
+				case 3:
+					System.out.println("\nThe Banking Application will be closed...");
+					break;
+			}
+			
+		}while(choice<3);
 	}
 }  
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
