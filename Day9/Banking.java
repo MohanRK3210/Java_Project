@@ -1,228 +1,153 @@
 import java.util.Scanner;
+import java.util.*;
 
-class Employee
+class Customer
 {
-	private String name;
-	private String category;
-	private double money;
+    private String customerName;
+    private int accountNumber;
+    private int openingBalance;
+    public int deposit,withdraw;
+    
+    public void setAccountNumber(int accountNo)
+    {
+        accountNumber = accountNo;
+    }
 
-	public String getname()
-	{
-		return name;
-	}
-	public void setname(String name)
-	{
-		this.name = name;
-		//return name;
-	}
+    public int getAccountNumber()
+    {
+        return accountNumber;
+    }
 
-	public String getcategory()
-	{
-		return category;
-	}
-	public void setcategory(String category)
-	{
-		this.category = category;
-		//return category;
-	}
+    public void setCustomerName(String customerName)
+    {
+        this.customerName = customerName;
+    }
 
-	public double getmoney()
-	{
-		return money;
-	}
-	public void setmoney(double money)
-	{
-		this.money = money;
-		//return money;
-	}
+    public String  getCustomerName()
+    {
+        return customerName;
+    }
 
-	public void account(String name,String category,double money)
-	{
-		System.out.println("\n ===== New Customer Details =====");
-		System.out.println("\nEmployee Name : "+name);
-		System.out.println("category : "+ category);
-		System.out.println("Salary : "+money);
-		
-	}
+    public int getOpeningBalance()
+    {
+        return openingBalance;
+    }
+
+    public void setOpeningBalance(int openBalance)
+    {
+        openingBalance = openBalance;
+    }
+
+    public void deposit(int deposit)
+    {
+        openingBalance += deposit;
+    }
+
+    public void withdraw(int withdraw)
+    {
+        openingBalance -= withdraw;
+    }
+
 }
 
-class customers
-{  
-    private String accno;  
-    private String name;  
-    private String acc_type;  
-    private long balance;  
-    Scanner scan = new Scanner(System.in);  
-    //method to open new account  
-    public void openAccount() 
+class Bank
+{
+    public static void main(String[] args)
     {
-        System.out.println("\n===== New Customer Details Form =====");
-        System.out.print("\nAccount Number: ");  
-        accno = scan.next();
-        System.out.print("Customer Name: ");  
-        name = scan.next();  
-        System.out.print("Opening Balance: ");  
-        balance = scan.nextLong();
-        System.out.print("Account type(Current/Saving) : ");  
-        acc_type = scan.next(); 
-        System.out.println("");  
-    }  
+        int option,accountNumber,openingBalance,deposit,withdraw;
+        String customerName;
+        Scanner scan = new Scanner(System.in);
+        ArrayList<Customer> array = new ArrayList<Customer>();
+        ArrayList values = new ArrayList();
 
-    public void showAccount() {  
-        System.out.print("\nName of account holder: " + name);  
-        System.out.print("Account no.: " + accno);  
-        System.out.print("Account type: " + acc_type);  
-        System.out.print("Balance: " + balance);  
-    }  
-    
-    public void deposit() {  
-        long amt;  
-        System.out.print("\nEnter the amount you want to deposit: ");  
-        amt = scan.nextLong();  
-        balance = balance + amt;  
-    }  
-    //method to withdraw money  
-    public void withdrawal() {  
-        long amt;  
-        System.out.print("\nEnter the amount you want to withdraw: ");  
-        amt = scan.nextLong();  
-        if (balance >= amt) {  
-            balance = balance - amt;  
-            System.out.println("Balance after withdrawal: " + balance);  
-        } else {  
-            System.out.println("Your balance is less than " + amt + "\tTransaction failed...!!" );  
-        }  
-    }  
-    public boolean search(String ac_no)
-    {
-        if(accno.equals(ac_no))
-        {
-            showAccount();
-            return true;
-        }
-        return false;
-        
-    }
-}  
-public class Banking 
-{  
-    public static void main(String arg[]) 
-    {  
-        
-        Scanner scan = new Scanner(System.in);  
-        int choose;
         do
         {
-        	System.out.println("\n===== category ===== \n  \n 1. Customer \n 2. Employee");
-        System.out.print("\nChoose your Option: ");
-        choose = scan.nextInt();
-        switch(choose)
-        {
-        	case 1:
-        		 System.out.print("\nNumber of customers do you want: ");  
-        int number = scan.nextInt();  
-        customers array[] = new customers [number];  
-        for (int i = 0; i < array.length; i++) 
-        {  
-            array[i] = new customers();  
-            array[i].openAccount();  
-        }  
-        int ch;  
-        do {  
-            System.out.println("\n===== Banking System Application=====");  
-            System.out.println("\n1. Display all account details \n 2. Search by Account number\n 3. Deposit the amount \n 4. Withdraw the amount \n 5.Exit ");  
-            System.out.print("\nEnter your choice: ");  
-            ch = scan.nextInt();  
-                switch (ch) {  
-                    case 1:  
-                        for (int i = 0; i < array.length; i++) 
-                        {  
-                            array[i].showAccount();  
-                        }  
-                        break;  
-                    case 2:  
-                        System.out.print("\nEnter account no. you want to search: ");  
-                        String ac_no = scan.next();  
-                        boolean found = false;  
-                        for (int i = 0; i < array.length; i++) 
-                        {  
-                            found = array[i].search(ac_no);  
-                            if (found) 
-                            {  
-                                break;  
-                            }  
-                        }  
-                        if (!found)
-                         {  
-                            System.out.println("Search failed! Account doesn't exist..!!");  
-                        }  
-                        break;  
-                    case 3:  
-                        System.out.print("\nEnter Account no. : ");  
-                        ac_no = scan.next();  
-                        found = false;  
-                        for (int i = 0; i < array.length; i++) 
-                        {  
-                            found = array[i].search(ac_no);  
-                            if (found) 
-                            {  
-                                array[i].deposit();  
-                                break;  
-                            }  
-                        }  
-                        if (!found)
-                         {  
-                            System.out.println("Search failed! Account doesn't exist..!!");  
-                        }  
-                        break;  
-                    case 4:  
-                        System.out.print("\nEnter Account No : ");  
-                        ac_no = scan.next();  
-                        found = false;  
-                        for (int i = 0; i < array.length; i++) 
-                        {  
-                            found = array[i].search(ac_no);  
-                            if (found) 
-                            {  
-                                array[i].withdrawal();  
-                                break;  
-                            }  
-                        }  
-                        if (!found)
-                         {  
-                            System.out.println("Search failed! Account doesn't exist..!!");  
-                        }  
-                        break;  
-                    case 5:  
-                        System.out.println("\nSee you soon...");  
-                        break;  
-                }  
-            }  
-            	while (ch < 5);
-        		break;
-        	case 2:
-        		 System.out.print("\nEmployee Name: ");
- 	             String name = scan.next();
- 	             System.out.print("category Work: ");
- 	             String category = scan.next();
- 	             System.out.print("Salary: ");
- 	             double money = scan.nextDouble();
+            
+            System.out.print("\n******** Banking ********\n");
+            System.out.print("\n 1.Account Opening");
+            System.out.print("\n 2.Deposit Amount");
+            System.out.print("\n 3.Withdrawal Amount");
+            System.out.print("\n 4.View all accounts");
+            System.out.println();
+            System.out.print("\nSelect your option: ");
+            option = scan.nextInt();
+        
+            switch(option)
+            {
+                case 1:
+                            System.out.println("\n===== Opening New Account =====");
+                            System.out.print("\nAccount Number: ");
+                            accountNumber = scan.nextInt();
 
- 	             Employee cus = new Employee();
- 	             cus.setname(name);
- 	             cus.setcategory(category);
- 	             cus.setmoney(money);
- 	             cus.account(name,category,money);
-        		break;
-        		case 3:  
-                        System.out.println("\nSee you soon...");  
-                        break;
-        }
-        }while(choose<3);
+                            System.out.print("Customer Name: ");
+                            customerName = scan.next();
 
+                            System.out.print("Opening Balance: ");
+                            openingBalance = scan.nextInt();
+                            Customer op = new Customer();
+
+                            op.setAccountNumber(accountNumber);
+                            op.setCustomerName(customerName);
+                            op.setOpeningBalance(openingBalance);
+                            System.out.print("\nDeposit Amount: ");
+                            deposit = scan.nextInt();
+                            op.deposit(deposit);                          
+
+                            System.out.print("\nWithdrawal Amount: ");
+                            withdraw = scan.nextInt();
+                            op.withdraw(withdraw);
+
+                            HashMap hm = new HashMap();
+                            values.add(op.getAccountNumber());
+                            values.add(op.getCustomerName());
+                            values.add(op.getOpeningBalance());
+                            hm.put(op.getAccountNumber(),values);
+                            System.out.println("\n"+hm.get(op.getAccountNumber()));
+
+                            array.add(op);
+                            System.out.println("\nThe number of records: "+ array.size());
+                         break;
+                case 2:
+                    // HashMap depositId = new HashMap();
+                    // System.out.print("\nAccount Number: ");
+                    // accountNumber = scan.nextInt();
+                    // System.out.print("\nDeposit Amount: ");
+                    // deposit = scan.nextInt();
+                    //op.setDeposit(deposit);
+                    break;
+
+
+                case 3:
+                    HashMap withdrawId = new HashMap();
+                    System.out.print("\nAccount Number: ");
+                    accountNumber = scan.nextInt();
+                    
+                    System.out.print("Withdrawal Amount: ");
+                    withdraw = scan.nextInt();
+                   // op.setWithdraw(withdraw);                    
+                    
+                    break;
+
+                case 4:
+                    System.out.println("View all accounts");
+                    for(int i=0;i<array.size();i++)
+                    {
+                        Customer account = /*(Customer)*/ array.get(i);
+                        System.out.println(account.getAccountNumber() + "\t" + account.getCustomerName() + "\t" + account.getOpeningBalance());
+                    }
+                    break;
+
+
+            }
+            
+        }while(option<5);
     }
-          
-    }  
+}
+
+
+
+
+
 
 
 

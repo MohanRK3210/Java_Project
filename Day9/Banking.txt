@@ -8,7 +8,7 @@ Deposit:
 date,account number,account holder name,depositer detail,contact number,deposit amount,denamination,depositer sign,branch,ifsc code,cheque attached or not.
 
 Withdrawal:
-date,account number,account holder name,,contact number,deposit amount,denamination,account owner sign,branch,ifsc code,cheque attached or not.
+date,account number,account holder name,contact number,deposit amount,denamination,account owner sign,branch,ifsc code,cheque attached or not.
 
 New Account:
 
