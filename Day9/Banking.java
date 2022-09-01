@@ -1,148 +1,149 @@
-import java.util.Scanner;
 import java.util.*;
 
-class Customer
+class Customer 
 {
-    private String customerName;
-    private int accountNumber;
-    private int openingBalance;
-    public int deposit,withdraw;
+    String accNumber,name;
+    int balance;
+    //ArrayList<String> transactions;
     
-    public void setAccountNumber(int accountNo)
+    Customer(String accNumber,String name,int balance)
     {
-        accountNumber = accountNo;
-    }
-
-    public int getAccountNumber()
+        this.accNumber = accNumber;
+        this.name = name;
+        this.balance = balance;
+    }  
+  
+    public void deposit(int amount)
     {
-        return accountNumber;
+        balance += amount;
     }
-
-    public void setCustomerName(String customerName)
+ 
+    public void withdraw(int amount)
     {
-        this.customerName = customerName;
+        balance -= amount;
     }
-
-    public String  getCustomerName()
-    {
-        return customerName;
-    }
-
-    public int getOpeningBalance()
-    {
-        return openingBalance;
-    }
-
-    public void setOpeningBalance(int openBalance)
-    {
-        openingBalance = openBalance;
-    }
-
-    public void deposit(int deposit)
-    {
-        openingBalance += deposit;
-    }
-
-    public void withdraw(int withdraw)
-    {
-        openingBalance -= withdraw;
-    }
-
 }
 
 class Bank
 {
-    public static void main(String[] args)
+    
+    
+    public static void main(String []args)
     {
-        int option,accountNumber,openingBalance,deposit,withdraw;
-        String customerName;
-        Scanner scan = new Scanner(System.in);
-        ArrayList<Customer> array = new ArrayList<Customer>();
-        ArrayList values = new ArrayList();
-
-        do
-        {
-            
-            System.out.print("\n******** Banking ********\n");
-            System.out.print("\n 1.Account Opening");
-            System.out.print("\n 2.Deposit Amount");
-            System.out.print("\n 3.Withdrawal Amount");
-            System.out.print("\n 4.View all accounts");
-            System.out.println();
-            System.out.print("\nSelect your option: ");
-            option = scan.nextInt();
+        Scanner scan  =  new Scanner(System.in);
+        HashMap<String,Customer> customerMap = new HashMap <String,Customer>();
+        Customer customer;
+        String accNumber;
+        int amount,choice;
         
-            switch(option)
+        do{
+            System.out.println("\n===== Welcome to Bank Application =====");
+            System.out.println("\n1. New Account Opening");
+            System.out.println("2. Customer Details");
+            System.out.println("3. Number of Customer");
+            System.out.println("4. All Customer Details");
+            System.out.println("5. Exit.");
+            
+            System.out.print("\nEnter your choice : ");
+            choice = scan.nextInt();
+            switch(choice)
             {
                 case 1:
-                            System.out.println("\n===== Opening New Account =====");
-                            System.out.print("\nAccount Number: ");
-                            accountNumber = scan.nextInt();
-
-                            System.out.print("Customer Name: ");
-                            customerName = scan.next();
-
-                            System.out.print("Opening Balance: ");
-                            openingBalance = scan.nextInt();
-                            Customer op = new Customer();
-
-                            op.setAccountNumber(accountNumber);
-                            op.setCustomerName(customerName);
-                            op.setOpeningBalance(openingBalance);
-                            System.out.print("\nDeposit Amount: ");
-                            deposit = scan.nextInt();
-                            op.deposit(deposit);                          
-
-                            System.out.print("\nWithdrawal Amount: ");
-                            withdraw = scan.nextInt();
-                            op.withdraw(withdraw);
-
-                            HashMap hm = new HashMap();
-                            values.add(op.getAccountNumber());
-                            values.add(op.getCustomerName());
-                            values.add(op.getOpeningBalance());
-                            hm.put(op.getAccountNumber(),values);
-                            System.out.println("\n"+hm.get(op.getAccountNumber()));
-
-                            array.add(op);
-                            System.out.println("\nThe number of records: "+ array.size());
-                         break;
-                case 2:
-                    // HashMap depositId = new HashMap();
-                    // System.out.print("\nAccount Number: ");
-                    // accountNumber = scan.nextInt();
-                    // System.out.print("\nDeposit Amount: ");
-                    // deposit = scan.nextInt();
-                    //op.setDeposit(deposit);
-                    break;
-
-
-                case 3:
-                    HashMap withdrawId = new HashMap();
-                    System.out.print("\nAccount Number: ");
-                    accountNumber = scan.nextInt();
+                    System.out.print("\nCustomer Name : ");
+                    String name = scan.next();
                     
-                    System.out.print("Withdrawal Amount: ");
-                    withdraw = scan.nextInt();
-                   // op.setWithdraw(withdraw);                    
-                    
-                    break;
-
-                case 4:
-                    System.out.println("View all accounts");
-                    for(int i=0;i<array.size();i++)
+                    System.out.print("Account Number : ");
+                    accNumber = scan.next();
+                    while(customerMap.containsKey(accNumber))
                     {
-                        Customer account = /*(Customer)*/ array.get(i);
-                        System.out.println(account.getAccountNumber() + "\t" + account.getCustomerName() + "\t" + account.getOpeningBalance());
+                        System.out.println("Account Numbwe already exists. Set again : ");
+                        accNumber = scan.next();
                     }
+
+                    System.out.print("Initial Deposit : ");
+                    scan.nextLine();
+                    while(!scan.hasNextInt())
+                    {
+                        System.out.println("Invalid amount. Enter again :");
+                        scan.nextLine();
+                    }
+                    amount=scan.nextInt();
+                    
+                    customer = new Customer(accNumber,name,amount);
+                    customerMap.put(accNumber,customer);
                     break;
-
-
-            }
-            
-        }while(option<5);
+                case 2:
+                    
+                    System.out.print("\nAccount Number: ");
+                    accNumber = scan.next();
+                    do
+                    {    
+                        if(customerMap.containsKey(accNumber))
+                        {
+                            customer = customerMap.get(accNumber);
+                            System.out.println("\n===== Account Holder Details =====");
+                            System.out.println("\n1. Deposit.");
+                            System.out.println("2. Withdraw.");
+                            System.out.println("3. Account Balance.");
+                            System.out.println("4. Log out.");
+                            System.out.print("\nEnter your choice : ");
+                            choice = scan.nextInt();
+                            scan.nextLine();
+                            switch(choice)
+                            {
+                                case 1:
+                                    System.out.print("\nEnter amount : ");
+                                    amount = scan.nextInt();
+                                    customer.deposit(amount);
+                                    System.out.println("\nYour deposit Amount: "+amount+" will be debit your account.");                    
+                                    break;
+                                case 2:
+                                    System.out.print("\nEnter amount : ");
+                                    amount = scan.nextInt();
+                                    customer.withdraw(amount);
+                                    System.out.println("\nYour withdraw Amount: "+amount+" will be credit your account.");                    
+                                    break;
+                                case 3:
+                                    //System.out.println("\nAccount Number: "+customerMap.get(bank()));
+                                    System.out.println("\nCustomer Name : "+customer.name);
+                                    System.out.println("Account balance : "+customer.balance);
+                                    break;
+                                case 4:
+                                    System.out.println("\nCustomer Profile Log out");
+                                    break;
+                            }
+                        }
+                        else
+                        {
+                            System.out.println("\nThe Acccount is Unavailable");
+                            break;
+                        }
+                        }while(choice<4);
+                        case 3:
+                            System.out.print("\nNumber of Customer in your Bank: "+customerMap.size());
+                            System.out.println();
+                            break;
+                        case 4:
+                        for(int i=0;i<customerMap.size();i++)
+                        {
+                            System.out.print("All Customer Details: "+customerMap.get(i));
+                        }
+                            break;
+                    }
+        }while(choice<5);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
